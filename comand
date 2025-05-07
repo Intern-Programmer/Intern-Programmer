@@ -1,0 +1,11 @@
+*To Enable*
+sudo bash
+sudo chmod 777 /media/
+
+*To Disable*
+
+chmod 444 /media/
+
+*To clear command history*
+
+history -c
