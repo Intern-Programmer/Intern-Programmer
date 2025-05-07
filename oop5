@@ -1,0 +1,70 @@
+    #include <iostream>  
+    using namespace std; 
+    class arr
+    {
+     public:
+    
+     template <typename T>
+     void getdata(T x[],int n)
+     {
+     cout<<"enter elements"<<endl;
+     for(int i=0;i<n;i++)
+    {
+     cin>>x[i];
+     
+    }
+    
+     }
+     template <typename T>
+     void display(T x[],int n)
+     {
+     cout<<"elements are::"<<endl;
+     for(int i=0;i<n;i++)
+    {
+     cout<<x[i]<<endl;
+     }
+    
+    }
+    template <typename T>
+    void selectionsort(T x[],int size)
+    {
+     for(int i=0;i<size;i++)
+     {
+        for(int j=0;j<size-1;j++)
+        {
+           if (x[i]<x[j])
+           {
+           T temp=x[i];
+           x[i]=x[j];
+           x[j]=temp;
+           }
+        }
+     }
+    }
+    };
+    
+    int main()
+    {
+    
+    arr a1,a2;
+    int z[5],k;
+    cout<<"enter size of array::";
+    cin>>k;
+    cout<<"enter integer value::"<<endl;
+    a1.getdata(z,k);
+    a1.display(z,k);
+    a1.selectionsort(z,k);
+    cout<<"elements after sorting::"<<endl;
+    a1.display(z,k);
+    float f[5];
+    int d;
+    cout<<"enter size of array::";
+    cin>>d;
+    cout<<"enter float value::"<<endl;
+    a2.getdata(f,d);
+    a2.display(f,d);
+    a2.selectionsort(f,d);
+    cout<<"elements after sorting::"<<endl;
+    a2.display(f,d);
+    return 0;
+    }
